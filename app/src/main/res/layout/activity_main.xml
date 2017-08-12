@@ -10,38 +10,46 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="16sp"
         android:text="Quantity"
-        android:textAllCaps="true"
-        android:layout_marginBottom="16sp"/>
+        android:textAllCaps="true" />
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:text="+"
-        android:onClick="increment"/>
-
-    <TextView
-        android:id="@+id/quantity_text_View"
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="0"
-        android:textColor="#000000"
-        android:textSize="16sp"  />
+        android:orientation="horizontal">
 
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:text="-"
-        android:onClick="decrement"/>
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:onClick="decrement"
+            android:text="-" />
+
+        <TextView
+            android:id="@+id/quantity_text_View"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:text="0"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:onClick="increment"
+            android:text="+" />
+    </LinearLayout>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16sp"
         android:text="Price"
-        android:textAllCaps="true"
-        android:layout_marginTop="16sp"/>
+        android:textAllCaps="true" />
 
     <TextView
         android:id="@+id/price_text_view"
@@ -51,13 +59,13 @@
         android:layout_marginTop="16sp"
         android:text="0"
         android:textColor="#000000"
-        android:textSize="16sp"  />
+        android:textSize="16sp" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Order"
-        android:onClick="submitOrder"/>
+        android:onClick="submitOrder"
+        android:text="Order" />
 
 </LinearLayout>

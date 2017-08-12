@@ -24,6 +24,7 @@ public class MainActivity extends Activity {
     public void submitOrder(View view) {
         display(quantity);
         displayPrice(quantity*5);
+        //displayMessage("Free");
     }
 
     public void increment(View view){
@@ -51,4 +52,13 @@ public class MainActivity extends Activity {
         TextView priceTextView = (TextView) findViewById(R.id.price_text_view);
         priceTextView.setText(getCurrencyInstance().format(number));
     }
+
+    /**
+     * This method displays the given text on the screen.
+     */
+    private void displayMessage(String message) {
+        TextView priceTextView = (TextView) findViewById(R.id.price_text_view);
+        priceTextView.setText(message);
+    }
+
 }
