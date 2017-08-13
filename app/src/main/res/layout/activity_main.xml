@@ -18,22 +18,22 @@
             android:ems="10"
             android:inputType="textCapWords"
             android:text=""
-            android:hint="Name"
+            android:hint="@string/name"
             android:layout_marginBottom="16sp"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16sp"
-            android:text="Toppings"
+            android:text="@string/toppings"
             android:textAllCaps="true" />
 
         <CheckBox
             android:id="@+id/whippedCream_check_box"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingLeft="24dp"
-            android:text="Whipped Cream"
+            android:paddingStart="24dp"
+            android:text="@string/whipped_cream_topping"
             android:textAllCaps="true" />
 
         <CheckBox
@@ -41,15 +41,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16sp"
-            android:paddingLeft="24dp"
-            android:text="Chocolate"
+            android:paddingStart="24dp"
+            android:text="@string/chocolate_topping"
             android:textAllCaps="true" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16sp"
-            android:text="Quantity"
+            android:text="@string/quantity"
             android:textAllCaps="true" />
 
         <LinearLayout
@@ -105,7 +105,7 @@
             android:layout_height="wrap_content"
             android:onClick="submitOrder"
             android:layout_marginTop="32sp"
-            android:text="Order" />
+            android:text="@string/order_button" />
 
     </LinearLayout>
 

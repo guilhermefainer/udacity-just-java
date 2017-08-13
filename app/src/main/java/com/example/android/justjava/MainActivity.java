@@ -34,9 +34,6 @@ public class MainActivity extends Activity {
         int price = calculatePrice(whippedCreamTopping, chocolateTopping);
 
         sendEmail(createOrderSummary(price, whippedCreamTopping, chocolateTopping, name));
-
-        //displayQuantity(quantity);
-        //displayMessage(createOrderSummary(price, whippedCreamTopping, chocolateTopping, name));
     }
 
     private void sendEmail(String message)
@@ -45,20 +42,20 @@ public class MainActivity extends Activity {
         intent.setType("*/*");
         intent.setData(Uri.parse("mailto:")); // only email apps should handle this
         intent.putExtra(Intent.EXTRA_EMAIL, "guilherme.fainer@gmail.com");
-        intent.putExtra(Intent.EXTRA_SUBJECT, "Order");
+        intent.putExtra(Intent.EXTRA_SUBJECT, getString(R.string.order));
         intent.putExtra(Intent.EXTRA_TEXT, message);
         if (intent.resolveActivity(getPackageManager()) != null) {
             startActivity(intent);
         }
         else
-            Toast.makeText(this, "Não foi possível enviar o email!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, getString(R.string.email_fail_send), Toast.LENGTH_SHORT).show();
     }
 
     public void increment(View view){
         if (quantity<100)
             quantity++;
         else
-            Toast.makeText(this, "100 is the maximum!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, getString(R.string.maximum_order), Toast.LENGTH_SHORT).show();
         displayQuantity(quantity);
     }
 
@@ -66,7 +63,7 @@ public class MainActivity extends Activity {
         if (quantity>0)
             quantity--;
         else
-            Toast.makeText(this, "0 is the minimum!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, getString(R.string.minimum_order), Toast.LENGTH_SHORT).show();
         displayQuantity(quantity);
     }
 
@@ -90,21 +87,16 @@ public class MainActivity extends Activity {
         quantityTextView.setText("" + number);
     }
 
-    /**
-     * This method displays the given text on the screen.
-     */
-//    private void displayMessage(String message) {
-//        TextView orderSummaryTextView = (TextView) findViewById(R.id.order_summary_text_view);
-//        orderSummaryTextView.setText(message);
-//    }
-
     private String createOrderSummary(int price, boolean whippedCream, boolean chocolate, String name){
-        return "Name: "+name+"\n"+
-                "Quantity: "+quantity+"\n"+
-                "Total: "+getCurrencyInstance().format(price)+"\n"+
-                "Add Whiped Cream? "+whippedCream+"\n"+
-                "Add Chocolate? "+chocolate+"\n"+
-                "Thank you!";
+        String message;
+        message=getString(R.string.name)+": "+name+"\n";
+        message+=getString(R.string.quantity)+": "+quantity+"\n";
+        message+=getString(R.string.total)+": "+price+"\n";
+        message+=getString(R.string.whipped_cream_topping)+"? "+whippedCream+"\n";
+        message+=getString(R.string.chocolate_topping)+": "+chocolate+"\n";
+        message+=getString(R.string.thank_you);
+
+        return message;
     }
 
 }

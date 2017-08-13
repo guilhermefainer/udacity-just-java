@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Just Java</string>
+    <string name="chocolate_topping">Chocolate</string>
+    <string name="name">Nome</string>
+    <string name="order_button">Fechar Pedido</string>
+    <string name="quantity">Quantidade</string>
+    <string name="thank_you">Obrigado!</string>
+    <string name="toppings">Coberturas</string>
+    <string name="total">Total</string>
+    <string name="whipped_cream_topping">Chantilli</string>
+    <string name="order">Pedido</string>
+    <string name="email_fail_send">Algo deu errado com o email!</string>
+    <string name="maximum_order">100 é o pedido máximo!</string>
+    <string name="minimum_order">0 é o pedido mínimo!</string>
+</resources>
